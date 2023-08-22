@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    .project{
+        width: 400px;
+        height: 450px;
+    }
+    .box1{
+        
+        height: 300px;
+        width: 280px;
+
+    }
+    
+</style>
+</head>
+<body>
+    <header>
+            <div class="grid grid-cols-1 md:grid-cols-2 justify-center  bg-[#F9F6E2] mx-auto ">
+               <div class="my-4 text-center mt-20">
+                <h2 class="text-2xl font-semibold">---SALE FEVER---</h2>
+                <h1 class="text-3xl font-bold">Purchase TK 200 or<br> above & get <span class="text-[#E527B2]">20% off</span></h1>
+                <p class="text-xl font-semibold">Use Promo Code :</p>
+                <button class="btn btn-secondary font-semibold mt-3 text-white">SELL200</button>
+               </div>
+               <div>
+         <img class="project" src="./Summer 1.png" alt="" srcset="">
+               </div>
+            </div>
+    </header>
+    <main>
+    <section class="ml-4">
+        <h1 class="text-3xl font-semibold">Kitchenware</h1>
+        <div  class="grid grid-cols-1 md:grid-cols-4">
+            <div id="product "   onclick="handalClickBtn(this)"   class=" bg-[#F4F4F4] p-10 mx-auto ml-7 mb-4 box1">
+                <img class="bg-[#11111105] " src="./prod1.png" alt="" srcset="">
+                <div class="rating">
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <h2 class="text-xl font-semibold">K. Accessories</h2>
+                <p class="font-semibold"><span id="price1">39.00</span> TK</p>
+            </div>
+            <div onclick="handalClickBtn(this)" class=" bg-[#F4F4F4] p-8  ml-7 box1">
+                <img class="bg-[#11111105]" src="./prod2.png" alt="" srcset="">
+                <div class="rating">
+                    <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <h2 class="text-xl font-semibold">K. Accessories</h2>
+                <p class="font-semibold"><span id="price2">39.00 </span>TK</p>
+            </div>
+            <div onclick="handalClickBtn(this)" class=" bg-[#F4F4F4] p-8 mx-auto ml-7 mt-3 box1">
+                <img class="bg-[#11111105]" src="./prod3.png" alt="" srcset="">
+                <div class="rating">
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <h2 class="text-xl font-semibold">Home Cooker</h2>
+                <p class="font-semibold"><span>49.00 </span>TK</p>
+            </div>
+            <div  class=" bg-[#F4F4F4] p-7 mx-auto ml-3 mt-3 ">
+                <div>
+                <h1 class="text-xl">Have coupon?</h1>
+               
+                <input type="text" name="" id="cupon">
+                <button disabled onclick="copponApply()"  id="apply-btn" class="btn btn-secondary mb-4" disabled>Apply</button>
+                <br>
+                <hr>
+                <!-- <h2 class="font-bold">Code Here</h2> -->
+                <div class="selected-id" id="items-id">
+
+                </div>
+                <div class="mt-4">
+                <p class="text-xl">Total Price :<span id="total">00</span>tk</p>
+                
+                 <p class="text-xl">Discount : <span id="discount-price">00</span>tk</p>
+                 <p class="text-xl">Total : <span id="total-price">00</span>tk</p>
+
+                 <!-- Open the modal using ID.showModal() method -->
+<button   class="btn btn btn-secondary tetx-white mt-3 " onclick="my_modal_1.showModal()" disabled id="btn">Make Purchase</button>
+
+<dialog id="my_modal_1" class="modal">
+  <form method="dialog" class="modal-box">
+    <img class="items-center mx-auto" src="./congo.png" alt="" srcset="">
+    <h3 class="font-bold text-lg text-center">Congratulations</h3>
+    <p class="py-4 text-center">Your Purchase the product</p>
+    <div class="modal-action">
+      <!-- if there is a button in form, it will close the modal -->
+      <button   class="btn btn-secondary text-white mx-auto" id="go-home" window.reload()>Go Home</button>
+    </div>
+  </form>
+</dialog>
+                </div>  
+            </div>
+            
+        </div>
+    </section>
+    <section class="ml-3">
+        <h1 class="text-3xl font-semibold">Sportswear</h1>
+        <div  class="grid grid-cols-1 md:grid-cols-3">
+            
+            <div onclick="handalClickBtn(this)" class=" bg-[#F4F4F4] p-8 mx-auto ml-7 box1">
+                <img class="bg-[#11111105]" src="./prod4.png" alt="" srcset="">
+                <div class="rating">
+                    <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <h2 class="text-xl font-semibold">Sports Back Cap</h2>
+                <p class="font-semibold"><span>50.00 </span>TK</p>
+            </div>
+            <div onclick="handalClickBtn(this)" class=" bg-[#F4F4F4] p-8 mx-auto ml-7 mt-3 box1">
+                <img class="bg-[#11111105]" src="./prod5.png" alt="" srcset="">
+                <div class="rating">
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <h2 class="text-xl font-semibold">Full Jersey Set</h2>
+                <p class="font-semibold"><span>50.00 </span>TK</p>
+            </div>
+            <div onclick="handalClickBtn(this)" class=" ml-7 bg-[#F4F4F4] p-8  mt-4 box1">
+                <img class="bg-[#11111105]" src="./prod6.png" alt="" srcset="">
+                <div class="rating">
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <h2 class="text-xl font-semibold">Sports cates</h2>
+                <p class="font-semibold"><span>49.00 </span>TK</p>
+            </div>
+        </div>
+    </section>
+    </main>
+    <script src="./index.js"></script>
+   
+</body>
+</html>
